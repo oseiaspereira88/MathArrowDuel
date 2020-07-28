@@ -1,26 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ScenesControll : MonoBehaviour
+public class ScenesController : MonoBehaviour
 {
-    public void openScenes(string nameScene){
-	switch(nameScene){
-		case "Fase1":
+	public void openScene(string nameScene){
+	switch (nameScene){
+		
+		case "MenuScene":
+				SceneManager.LoadScene(1);
+			break;
 
-		break;
-		case "Menu":
-			SceneManager.LoadScene(nameScene)
-		break;
-		case "Instrucoes":
-			SceneManager.LoadScene(nameScene)
-		break;
-		case "Creditos":
-			SceneManager.LoadScene(nameScene)
-		break;
+		case "InstrucoesScene":
+				SceneManager.LoadScene(2);
+			break;
+
+		case "CreditosScene":
+				SceneManager.LoadScene(3);
+			break;
+
+		case "SoloScene":
+				SceneManager.LoadScene(4);
+			break;
+
 		case "Sair":
-			finish();
-		break;
+				Application.Quit();
+			break;
 
 	}
 }
