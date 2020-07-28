@@ -90,6 +90,7 @@ public class TurnoScript : MonoBehaviour
                 else
                 {
                     turno++;
+                    checkAcertos();
                     proximoTurno();
                 }
 
